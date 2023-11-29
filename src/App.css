@@ -1,0 +1,56 @@
+/* If the page width is greater than 1024px, then scroll horizontally.
+If the page width is less than 1024px then scroll vertically. */
+#root {
+	background: #000;
+	margin: 2vh auto calc(2vh - 10px) auto;
+	padding-bottom: 10px;
+	width: 276px;
+}
+
+#frame {
+	height: calc(96vh - 10px);
+	overflow: auto;
+}
+
+#gallery {
+	height: max-content;
+	overflow: scroll;
+	width: 276px;
+}
+
+img {
+	padding: 0 10px 6px 10px;
+}
+
+img:first-child {
+	padding-top: 10px;
+}
+
+/* Screen greater than 1024px */
+@media screen and (min-width: 1024px) {
+	#root {
+		height: 276px;
+		margin: calc(50vh - 138px) auto;
+		padding-bottom: 0;
+		padding-right: 10px;
+		width: calc(96vw - 10px);
+	}
+
+	#frame {
+		height: 276px;
+	}
+
+	#gallery {
+		height: 276px;
+		width: max-content;
+	}
+
+	img {
+		padding: 10px 10px 0 0;
+	}
+
+	img:first-child {
+		padding-top: 0;
+		padding-left: 10px;
+	}
+}
